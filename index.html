@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iframe embedder</title>
@@ -13,14 +11,17 @@
             align-items: center;
         }
         #embeddedFrame {
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             border: none;
         }
     </style>
 </head>
 <body>
-    <iframe id="embeddedFrame"></iframe>
+    <iframe id="embeddedFrame" src="https://example.org"></iframe>
     <script>
       function isValidUrl(string) {
           try {
@@ -50,5 +51,6 @@
           iframe.srcdoc = errorMessage;
       }
     </script>
-</body>
-</html>
+
+
+</body></html>
